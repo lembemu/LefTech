@@ -1,0 +1,690 @@
+
+*{
+    font: outline;
+    font-size: 15pt;
+    font-family: sans-serif;
+    box-sizing: border-box;
+}
+html,body{
+  margin: 0;
+  padding: 0;
+}
+body{
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+body h1,h2,h3,h4,h5,h6{
+  margin: 0;
+  padding:0;
+}
+.btn-back_to_top {
+  position: fixed;
+  bottom: 10px;
+  right: 14px;
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  font-size: 18px;
+  border-radius: 50%;
+  background-color: #52565c;
+  color: #fff;
+  visibility: hidden;
+  cursor: pointer;
+  box-shadow: 0 3px 9px rgba(0, 0, 0, 0.4);
+  z-index: 99;
+}
+
+nav{
+    position: sticky;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    z-index: 100;
+    background-color: rgba(14, 14, 13, 0.774);
+    top: 0;
+}
+
+nav .nav-bar{
+    position: relative;
+    display: inline-block;
+}
+nav .account{
+    position: relative;
+    display: inline-block;
+}
+nav a{
+    display: inline-block;
+    position: relative;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px;
+    color: goldenrod;
+    /*font-size: 120% !important;*/
+}
+.content .menu-btn{
+    cursor: pointer;
+    position: relative;
+}
+.content{
+  position: relative;
+  display: inline-block;
+}
+.content .menu-content{
+    display: none;
+    position: absolute;
+    text-align: center;
+    /*min-width: 200px;*/
+    background-color: rgba(0, 0, 0, 0.774);
+    transition-delay: 2s;
+    transition-property: display;
+    box-shadow: 0px 8px 16px 0px, rgba(0, 0, 0, .2);
+    z-index: 1;
+    
+}
+.content .menu-content a{
+    display: block;
+    text-decoration: none;
+    color: darkgoldenrod;
+}
+/*nav a:link{
+  color: goldenrod;
+}
+nav a:visited{
+  color: darkgoldenrod;
+}*/
+nav a:hover,.active{
+    background-color: rgba(0,0,0,.2);
+    color: #fd7f;
+    border-bottom: 2px solid;
+}
+.content:hover .menu-content {
+  display: block;
+}
+nav a:active {
+  color: darkgoldenrod;
+  border-bottom: 2px solid darkgoldenrod;
+}
+header{
+    display: block;
+    /*width: 100%;*/
+    height: auto;
+    text-align: center;
+    background-image: linear-gradient(rgba(12,15,18,.8) ,rgba(12,15,18,0.8)),url(images/artwork1.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+}
+header .top-banner{
+    position: relative;
+    margin: 0 auto;
+   
+}
+header .top-banner h1{
+    margin: 0;
+    width: auto;
+    font-size: 4rem;
+}
+header .top-banner h1::first-letter{
+    color: darkgoldenrod;
+}
+header .top-banner h1 span{
+    font-size: 16pt;
+    letter-spacing: 4px;
+    border-bottom: 4px dashed darkgoldenrod;
+}
+header .top-banner p{
+  /*font-size: 18pt;*/
+}
+header #sec-heading{
+  display: inline-block;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  border: 1px solid;
+  padding: 10px;
+  /*font-size: 28pt;*/
+  background-image: radial-gradient(transparent,rgba(245,246,234,.6));
+  border-radius: 100px;
+  border-bottom-right-radius: 0;
+  border-bottom: 4px solid darkgoldenrod;
+  border-right: 4px solid darkgoldenrod;
+}
+.content-wrapper{
+  flex: 1 0 auto;
+  display: flex;
+  position: relative;
+  padding: 4px;
+  height: auto;
+  color: black;
+}
+.content-wrapper aside{
+  position: sticky;
+  top: 0;
+  width: auto;
+  word-wrap: break-word;
+  /*background-color: rgba(14, 18, 17, .8);*/
+}
+.content-wrapper aside a{
+  text-decoration: none;
+}
+.content-wrapper aside a i{
+  display: block;
+  padding: 10px;
+  text-align: center;
+  background-color:  rgba(245, 245, 234, .8);
+}
+.content-wrapper aside a i:hover{
+  background-color: #fff;
+  border-bottom: 2px solid rgba(14, 18, 17, .8);
+  border-bottom-width: 100%;
+}
+.content-wrapper section{
+  position: relative;
+  display: block;
+  width: 100%;
+  float: right;
+  height: inherit;
+  right: 0;
+  padding: 0 10px 10px 10px;
+}
+section .container{
+  position: relative;
+  width: 100%;
+  display: flex;
+  height: auto;
+  padding: 10px;
+  background-color: rgba(245, 245, 234, .8);
+}
+section .container img{
+  width: 50%;
+  height: auto;
+  padding: 10px;
+  border-radius: 18px;
+  background-color: transparent;
+}
+.container:hover .text{
+  background-color: rgba(245, 245, 234, .8);
+}
+.text{
+  display: inline-flex;
+  flex-direction: column;
+  position: relative;
+  width: auto;
+  padding: 20px;
+  height: auto;
+  transition: background-color 2s;
+}
+section a{
+  text-decoration: none;
+  font-weight: 500;
+}
+section .container a h4{
+  display: block;
+  /*width: 100%;*/
+  color: darkgoldenrod;
+}
+section span{
+  display: inline-block;
+  width: auto;
+  background-color: rgba(12,18,17,.8);
+  color: #fff;
+  padding: 10px;
+  /*font-size: 18pt;*/
+  font-weight: 300;
+  border-radius: 18px;
+  border-bottom-right-radius: 0;
+}
+.action-btn{
+  /*width: 100%;*/
+  display: inline-block;
+  position: relative;
+  bottom: 0;
+  right: 8px;
+  box-sizing: border-box;
+}
+.action-btn a{
+  display: block;
+  text-align: center;
+  font-weight: 400;
+  background-color: #EC1B1B;
+  color: #fff;
+  padding: 10px;
+  border-radius: 14px;
+  float: right;
+}
+
+.content-wrapper section .banner{
+  /*width: 100%;*/
+  height: 400px;
+  background-image: linear-gradient(rgba(0,0,0,.8),rgba(0,0,0,.8)),url(images/33146.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.content-wrapper section .banner .heading h1{
+  position: relative;
+  text-align: center;
+  /*font-size: 4rem;*/
+  color: rgba(245, 245, 234, .8);
+  font-weight: 900;
+}
+section .banner .heading p{
+  padding:  8px;
+  text-align: center;
+  color: white;
+}
+.content-wrapper section .block{
+  display: inline-block;
+  position: relative;
+  width:100%;
+  height: auto;
+  background-color: rgba(14, 18, 17, .8);
+  margin: 2px 2px 6px 2px;
+  padding: 4px;
+  cursor: pointer;
+  color: white;
+  text-align: center;
+}
+.content-wrapper section .block i{
+  font-size: 3rem;
+  text-align: center;
+  color: darkgoldenrod;
+}
+/*.content-wrapper section .block h1{
+  font-size: 180%;
+}
+.content-wrapper section .block p{
+  font-size: 150%;
+}*/
+
+/* styling for services.html*/
+.content-wrapper section .package{
+  display: none;
+  width: 100%;
+  height: auto;
+  background-color: white;
+  color: black;
+  border: 1px solid grey;
+  font-size: 150%;
+  text-align: left;
+  transition-delay: animation-delay 6s ease-in-out;
+}
+@keyframes animate{
+  from{color: black;}
+  to{color: #fff;}
+}
+section .block::after{
+  content:"Click Me to Explore";
+  border: 1px solid ;
+  padding: 8px;
+  display: inline-block;
+  animation-name: animate;
+  animation-duration: 4s;
+  animation-delay: 0.2s;
+  animation-play-state: running;
+  animation-iteration-count: finite;
+}
+section .block.active{
+  background-color: rgba(12,17,18,.2);
+  color: rgba(34,56,23,.6);
+}
+section .package.show{
+  display: block;
+}
+.package .text2{
+  position: relative;
+  display: block;
+  margin-bottom: 6px;
+}
+.package img{
+  width: 100%;
+  display: block;
+  max-height: 500px;
+  border-radius: 8px;
+}
+/*.package h3{
+  font-size: 180%;
+}*/
+/*.content-wrapper section .block:hover .package{
+  display: block;
+}*/
+
+/* styling for products.html*/
+.bind{
+  display: flex;
+  flex-direction: column;
+}
+.card-wrapper{
+  width: 100%;
+  display: block;
+  position: relative;
+  height: auto;
+  margin-bottom: 8px;
+}
+.card-wrapper h1{
+  display: block;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.774);
+  color: #fff;
+  padding: 20px 10px 20px 10px;
+  /*font-size: 180%;*/
+  font-weight: 800;
+  text-align: center;
+}
+.card-wrapper .card{
+  position: relative;
+  display: inline-block;
+  width: 250px;
+  height: auto;
+  background-color: lightgrey;
+  margin: 4px;
+  padding: 10px;
+  float: left;
+}
+.card-wrapper .card:hover{
+  outline: 2px dashed grey;
+}
+.card-wrapper 
+.card img{
+  width: 100%;
+  height: 200px;
+  border-radius:8px;
+}
+.card .action-btn{
+  position: absolute;
+  bottom: 8px;
+}
+/* style for about.html*/
+section .blog{
+  width: 90%;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: rgba(245,246,234,.6);
+  text-align: center;
+  border: 1px dashed darkgoldenrod;
+  margin-bottom: 6px; 
+}
+.blog h1{
+  padding: 10px;
+  color: #EFA32F;
+}
+.blog img{
+  width: 60%;
+  height: 400;
+  padding: 4px;
+  margin: 0 auto;
+  box-shadow: 0 0 10px #000;
+  border: 1px solid darkgoldenrod;
+  border-radius: 50%;
+  border-bottom-right-radius: 0;
+}
+.blog:hover{
+  box-shadow: 0 0px 4px #EFA32F, 0px 0px 4px darkgrey;
+}
+
+/* styling for footer*/
+footer{
+  position: relative;
+  background-image: linear-gradient(rgba(12,18,17,.8),rgba(12,18,17,.8));
+  margin-bottom: 0;
+  bottom: 0;
+  background-origin: border-box;
+  font-size: 12pt;
+  height: auto;
+  color: white;
+}
+.footer-container{
+  display: flex;
+}
+footer h1,h4{
+  margin: 0;
+}
+.brand{
+  height: auto;
+  display: block;
+  text-align: center;
+  float: left;
+  padding: 10px;
+}
+footer .brand h1{
+  font-size: 2rem;
+}
+.brand h1::first-letter{
+  color: darkgoldenrod;
+}
+.brand h1 span{
+  border-bottom: 2px dashed darkgoldenrod;
+}
+footer .wrapper{
+  position: relative;
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  height: auto;
+  word-wrap: break-word;
+  text-align: center;
+}
+footer .wrapper address{
+  padding: 20px 10;
+  color: lightgrey;
+  text-align: center;
+}
+.wrapper address h1{
+  padding-top: 10px;
+  color: darkgoldenrod;
+}
+.wrapper address h1 i{
+  padding-right: 10px;
+  color: #fff;
+  font-size: 1rem;
+}
+.wrapper address h4{
+  display: inline-block;
+  padding: 8px;
+  color: indianred;
+  border-radius: 4px;
+  box-shadow: 0 0 4px 1px white;
+  text-align: left;
+}
+footer .wrapper address{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+footer ul{
+  text-align: center;
+}
+footer ul li{
+  list-style-type: none;
+}
+footer ul li a{
+  display: inline-block;
+  text-decoration: none;
+  cursor: pointer;
+  color: darkgoldenrod;
+  padding: 10px;
+  font-weight: bold;
+}
+footer a:hover{
+  border-bottom: 1px solid grey;
+}
+footer .contact{
+  position: sticky;
+  bottom: 0;
+  background-color: white;
+  text-align: center;
+}
+footer .contact a{
+  display: inline-block;
+  text-decoration: none;
+  color: grey;
+}
+footer .contact a .fa-envelope{
+  color: #EF1F0C;
+}
+footer .contact a i{
+  padding: 10px;
+}
+footer .contact a .fa-phone-volume{
+  color: #0CEF4B;
+}
+footer #copyright{
+  position: sticky;
+  background-color: black;
+  color: white;
+  bottom: 0;
+  padding: 10px;
+  text-align: center;
+  margin: 0;
+}
+@media screen and (max-width: 360px){
+    * {
+      font-size: 10pt;
+    }
+    .content-wrapper{
+      flex-direction: column-reverse;
+    }
+    aside{
+      display: flex;
+      justify-content: center;
+      text-align: center;
+    }
+    aside a{
+      display: inline-block;
+    }
+    aside a{
+      background-color: transparent;
+    }
+    aside a i{
+      background-color: transparent;
+    }
+    aside::before{
+      content: "Get in touch";
+      background-color: darkgoldenrod;
+      color: #fff;
+      font-weight: 200;
+      padding: inherit;
+    }
+    section .container img{
+      width: 100%;
+      height:400px;
+    }
+    .text{
+      width: 100%;
+    }
+    .blog{
+      width: 100%;
+      margin: 0;
+    }
+    nav{
+      display: inline-block;
+     /* background-color: rgba(245,245,245,.8);*/
+     padding: 0;
+    }
+    nav a{
+      display: inline-block;
+    }
+    nav .account{
+      float: right;
+    }
+    section .container{
+      display: block;
+    }
+    section .container img{
+      height: auto;
+    }
+    .card-wrapper .card{
+      width: 100%;
+      position: relative;
+    }
+    .card-wrapper img{
+      height: auto;
+    }
+    .card-wrapper .card .action-btn{
+      position: absolute;
+      bottom: 8px;
+    }
+    .card:hover{
+      box-shadow: 2px 2px 4px #000;
+    }
+    .footer-container{
+      flex-direction: column;
+    }
+}
+
+
+@media screen and (max-width: 480px){
+  * {
+    font-size: 11pt;
+  }
+  .content-wrapper{
+    flex-direction: column-reverse;
+  }
+  aside{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+  }
+  aside a{
+    display: inline-block;
+  }
+  aside a{
+    background-color: transparent;
+  }
+  aside a i{
+    background-color: transparent;
+  }
+  aside::before{
+    content: "Get in touch:";
+    background-color: darkgoldenrod;
+    color: #fff;
+    font-weight: 400;
+    padding: 4px;
+  }
+  section .container img{
+    width: 100%;
+    height:400px;
+  }
+  .text{
+    width: 100%;
+  }
+  .blog{
+    width: 100%;
+    margin: 0;
+  }
+  nav{
+    display: inline-block;
+   /* background-color: rgba(245,245,245,.8);*/
+   padding: 0;
+  }
+  nav a{
+    display: inline-block;
+  }
+  nav .account{
+    float: right;
+  }
+  section .container{
+    display: block;
+  }
+  section .container img{
+    height: auto;
+  }
+  .card-wrapper .card{
+    width: 100%;
+    position: relative;
+  }
+  .card-wrapper img{
+    height: auto;
+  }
+  .card-wrapper .card .action-btn{
+    position: absolute;
+    bottom: 8px;
+  }
+  .card:hover{
+    box-shadow: 2px 2px 4px #000;
+  }
+  .footer-container{
+    flex-direction: column;
+  }
+}

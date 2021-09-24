@@ -1,0 +1,113 @@
+body{
+  background-image: linear-gradient(rgba(12,17,18,.4),rgba(12,17,18,.4)),url(images/webdev2.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-origin: content-box;
+}
+form{
+  width: 50%;
+  height: auto;
+  margin: 4vh auto;
+  padding: 20px;
+  border: 2px solid darkgoldenrod; 
+  border-radius: 18px;
+  background-color: rgba(12,17,18,.6);
+  box-shadow: 2px 4px 12px grey;
+}
+form h1{
+  text-align: center;
+  padding: 20px;
+  /*font-size: 2rem;*/
+  font-weight: bold;
+  color: white;
+}
+form label{
+  color: white;
+  font-weight: bold;
+}
+form .input{
+  width: 100%;
+  height: 40px;
+  padding: 10px;
+  margin-bottom: 4px;
+  border: transparent;
+  border-bottom: 2px solid darkgoldenrod;
+  background-color: transparent;
+  color: white;
+  font-weight: bold;
+}
+form .input:focus{
+  outline: none;
+}
+form .input:hover{
+  border-bottom-color: white;
+  background-color: rgba(12,17,18,.2);
+  border: 1px solid white;
+}
+form p,#checkbox{
+  display: inline;
+}
+form p{
+  color: white;
+}
+form #submit{
+  text-align: center;
+  padding: 10px;
+  width: 100%;
+  height: 40px;
+  border-radius: 8px;
+  border: none;
+  color: white;
+  background-color: steelblue;
+}
+form #submit:focus{
+  outline: none;
+}
+form #submit:hover{
+  background-color: rgba(12,234,88,.8);
+}
+form #google,#facebook{
+  width: 100%;
+  height: auto;
+  padding: 10px;
+  border-radius: 8px;
+  margin-bottom: 4px;
+  font-weight: bold;
+  color: #1232E6;
+  background-color: rgba(234,246,236,.8);
+  border: 1px solid white;
+}
+form button:focus{
+  outline: none;
+}
+form button{
+  position: relative;
+}
+form button i{
+  position: relative;
+  left: 0;
+  top: 0;
+  padding: 10px;
+  /*font-size: 180%;*/
+}
+form #google i{
+  color: #E61212;
+}
+form #facebook i{
+  color: #1232E6;
+}
+form #google:hover,#facebook:hover{
+  background-color: rgba(12, 234, 88, .8);
+  color: #fff;
+}
+@media screen and (max-width: 360px) {
+  form{
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  form{
+    width: 100%;
+  }
+}

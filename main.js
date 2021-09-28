@@ -13,13 +13,11 @@ for (var i = 0; i < block.length; i++) {
 }
 
 
-var backTop = $(".btn-back_to_top"),nav = $('nav'),a = $('nav a');
+var backTop = $(".btn-back_to_top");
 
 $(window).scroll(function() {
   if ($(document).scrollTop() > 400) {
     backTop.css('visibility', 'visible');
-    nav.css('background-color','whitesmoke');
-    a.css('color','black');
   }
   else if ($(document).scrollTop() < 400) {
     backTop.css('visibility', 'hidden');

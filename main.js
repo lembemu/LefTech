@@ -12,17 +12,17 @@ for (var i = 0; i < block.length; i++) {
   }
 }
 
-var nav = $('nav');
-var backTop = $(".btn-back_to_top");
+
+var backTop = $(".btn-back_to_top"),nav = $('nav'),a = $('nav a');
 
 $(window).scroll(function() {
   if ($(document).scrollTop() > 400) {
     backTop.css('visibility', 'visible');
-    nav.css('background-color','#52565c');
+    nav.css('background-color','whitesmoke');
+    a.css('color','black');
   }
   else if ($(document).scrollTop() < 400) {
     backTop.css('visibility', 'hidden');
-    nav.css('background-color','rgba(14, 14, 13, 0.774)');
   }
 });
 

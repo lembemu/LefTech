@@ -42,13 +42,14 @@ nav{
     display: flex;
     justify-content: space-between;
     z-index: 100;
-    background-color: rgba(14, 14, 13, 0.774);
+    background-color: rgba(29, 29, 28,.4);
     top: 0;
 }
 
 nav .nav-bar{
     position: relative;
     display: inline-block;
+    float: right; 
 }
 nav .account{
     position: relative;
@@ -107,23 +108,25 @@ nav a:active {
   border-bottom: 2px solid darkgoldenrod;
 }
 header{
+    position: relative;
     display: block;
     /*width: 100%;*/
-    height: auto;
+    height: 100vh;
     text-align: center;
     background-image: linear-gradient(rgba(12,15,18,.8) ,rgba(12,15,18,0.8)),url(images/artwork1.jpg);
     background-position: center;
     background-repeat: no-repeat;
+    background-origin: content-box;
     background-size: cover;
     color: white;
 }
 header .top-banner{
     position: relative;
-    margin: 0 auto;
+    margin: 10vh auto;
    
 }
 header .top-banner h1{
-    margin: 0;
+    position: relative;
     width: auto;
     font-size: 4rem;
 }
@@ -135,10 +138,8 @@ header .top-banner h1 span{
     letter-spacing: 4px;
     border-bottom: 4px dashed darkgoldenrod;
 }
-header .top-banner p{
-  /*font-size: 18pt;*/
-}
 header #sec-heading{
+  position: relative;
   display: inline-block;
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   border: 1px solid;
@@ -149,6 +150,24 @@ header #sec-heading{
   border-bottom-right-radius: 0;
   border-bottom: 4px solid darkgoldenrod;
   border-right: 4px solid darkgoldenrod;
+}
+header .scrollDown{
+  margin-top: 40px;
+  text-align: center;
+  line-height: 50px;
+}
+header .scrollDown a{
+  font-size: 24px;
+  color: white;
+  padding: 20px;
+  border: 1px solid;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+
+}
+header .scrollDown a:hover{
+  color: #fd7f;
 }
 .content-wrapper{
   flex: 1 0 auto;

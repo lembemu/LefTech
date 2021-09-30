@@ -1,7 +1,8 @@
 body{
-  background-image: linear-gradient(rgba(12,17,18,.4),rgba(12,17,18,.4)),url(images/webdev2.jpg);
+  background-image: linear-gradient(rgba(12,17,18,.4),rgba(12,17,18,.4)),url(images/tech3.jpg);
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: center;
   background-origin: content-box;
 }
 form{

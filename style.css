@@ -34,14 +34,32 @@ body h1,h2,h3,h4,h5,h6{
   z-index: 99;
 }
 
+.logo {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+}
+
+.logo img {
+    height: 40px;
+    margin-right: 10px;
+}
+
+.logo-text {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: steelblue;
+}
+
 nav{
     position: sticky;
     height: auto;
     display: flex;
     justify-content: space-between;
     z-index: 100;
-    background-color: rgb(70, 130, 180,.4);
+    background-color: rgba(255, 255, 255, 0.95);
     top: 0;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
 nav .nav-bar{

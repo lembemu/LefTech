@@ -4,8 +4,7 @@ console.log('Hello World,\nI am Frank Lembemu, the owner of this website(LefTech
 var block = document.getElementsByClassName('block');
 var packages = document.getElementsByClassName('package');
 
-var i;
-for (var i = 0; i < block.length; i++) {
+for (let i = 0; i < block.length; i++) {
   block[i].onclick = function(){
     this.classList.toggle('active');
     this.nextElementSibling.classList.toggle('show');

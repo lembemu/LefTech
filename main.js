@@ -1,6 +1,33 @@
 console.log('Hello World,\nI am Frank Lembemu, the owner of this website(LefTech).');
 
 
+// Smooth scroll
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+        });
+    });
+});
+
+// Back to top button
+const backToTop = document.querySelector('.btn-back_to_top');
+window.addEventListener('scroll', () => {
+    if (window.pageYOffset > 300) {
+        backToTop.style.display = 'block';
+    } else {
+        backToTop.style.display = 'none';
+    }
+});
+
+backToTop.addEventListener('click', () => {
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    });
+});
+
 var block = document.getElementsByClassName('block');
 var packages = document.getElementsByClassName('package');
 

@@ -1,6 +1,6 @@
 *{
     font-family: sans-serif;
-    font-size: 15pt;
+    font-size: 10pt;
     box-sizing: border-box;
 }
 html,body{
@@ -91,8 +91,9 @@ nav .nav-bar{
         text-align: center;
     }
     .nav-bar a {
+        display: block;
         padding: 10px;
-        width: 100%;
+        width: auto;
     }
     .content {
         width: 100%;
@@ -107,8 +108,10 @@ nav a{
     position: relative;
     text-decoration: none;
     font-weight: bold;
-    padding: 10px;
+    padding: 10px 20px;
     color: steelblue;
+    transition: color 0.3s ease-in-out;
+    border-radius: 4px;
     /*font-size: 120% !important;*/
 }
 .content .menu-btn{
@@ -124,7 +127,7 @@ nav a{
     position: absolute;
     text-align: center;
     /*min-width: 200px;*/
-    background-color: rgba(0,0, 0, 0.774);
+    background-color: steelblue;
     transition-delay: 2s;
     transition-property: display;
     box-shadow: 0px 8px 16px 0px, rgba(0, 0, 0, .2);
@@ -134,7 +137,7 @@ nav a{
 .content .menu-content a{
     display: block;
     text-decoration: none;
-    color: darkgoldenrod;
+    color: white;
 }
 .content .menu-content a:hover{
     background-color: rgba(0,0,0,.2);
@@ -148,21 +151,20 @@ nav a:visited{
   color: darkgoldenrod;
 }*/
 nav a:hover,.active{
-    background-color: rgba(0,0,0,.2);
-    color: #fd7f;
-    border-bottom: 2px solid;
+    background-color: steelblue;
+    color: white;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.3);
 }
 .content:hover .menu-content {
   display: block;
 }
-nav a:active {
-  color: darkgoldenrod;
-  border-bottom: 2px solid darkgoldenrod;
+nav a:hover {
+  opacity: 0.8;
 }
 
 header .top-banner{
     position: relative;
-    margin: 10vh auto;
+    margin: 2vh auto;
 
 }
 header .top-banner h1{

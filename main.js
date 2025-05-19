@@ -1,4 +1,4 @@
-console.log('Hello World,\nI am Frank Lembemu, the owner of this website(LefTech).');
+console.log('Hello World,\nI am Frank Lembemu, the owner of this website(Flem-Tech).');
 
 
 // Smooth scroll

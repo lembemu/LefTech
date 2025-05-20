@@ -56,7 +56,7 @@ header{
     position: relative;
     display: block;
     width: 100%;
-    height: 80vh;
+    height: auto;
     text-align: center;
     background-position: center;
     background-repeat: no-repeat;

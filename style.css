@@ -165,8 +165,7 @@ nav a:hover {
 
 header .top-banner{
     position: relative;
-    margin: 2vh auto;
-
+    margin: 4px;
 }
 header .top-banner h1{
     position: relative;
@@ -201,7 +200,7 @@ header .scrollDown{
 }
 header .scrollDown a{
   font-size: 24px;
-  color: white;
+  color: steelblue;
   padding: 20px;
   border: 1px solid;
   width: 100px;
@@ -347,11 +346,30 @@ section .banner .heading p{
   cursor: pointer;
   color: white;
   text-align: center;
+  border-radius: 8px;
+  transition: background-color 0.3s ease-in-out;
+  transition-delay: 0.2s;
+  transition-property: background-color;
+  transition-timing-function: ease-in-out;
+  transition-duration: 0.3s;
+  border: 1px solid rgba(14, 18, 17, .8);
+  box-shadow: 0 0 4px #000;
+  
 }
 .content-wrapper section .block i{
   font-size: 3rem;
   text-align: center;
   color: darkgoldenrod;
+  padding: 10px;
+  border-bottom: 1px solid darkgoldenrod;
+  margin-bottom: 10px;
+  border-radius: 50%;
+  border-bottom-right-radius: 0;
+  transition: color 0.3s ease-in-out;
+  transition-delay: 0.2s;
+  transition-property: color;
+  transition-timing-function: ease-in-out;
+  transition-duration: 0.3s;
 }
 /*.content-wrapper section .block h1{
   font-size: 180%;
@@ -393,17 +411,57 @@ section .block.active{
 }
 section .package.show{
   display: block;
+  background-color: rgba(245,246,234,.6);
+  border: 1px solid darkgoldenrod;
+  box-shadow: 0 0 4px #000;
+  border-radius: 8px;
+  padding: 10px;
+  margin-bottom: 8px;
+  transition-delay: 0.2s;
+  transition-property: display;
+  transition-timing-function: ease-in-out;
+  transition-duration: 0.3s;
+  transition: display 0.3s ease-in-out;
+  color: black;
+  font-size: 100%;
+  border-bottom-right-radius: 0;
+  border-bottom: 4px solid darkgoldenrod;
+  border-right: 4px solid darkgoldenrod;
+  
 }
 .package .text2{
   position: relative;
   display: block;
   margin-bottom: 6px;
+  width: 100%;
+  height: auto;
+  background-color: rgba(245,246,234,.6);
+  border: 1px solid darkgoldenrod;
+  border-radius: 8px;
+  padding: 10px;
+  
 }
 .package img{
   width: 100%;
   display: block;
   max-height: 500px;
   border-radius: 8px;
+  border-bottom-right-radius: 0;
+  border-bottom: 4px solid darkgoldenrod;
+  border-right: 4px solid darkgoldenrod;
+  border: 1px solid darkgoldenrod;
+  box-shadow: 0 0 4px #000;
+  margin-bottom: 8px;
+  transition: opacity 0.3s;
+  loading: lazy;
+  transition-delay: 0.2s;
+  transition-property: opacity;
+  transition-timing-function: ease-in-out;
+  transition-duration: 0.3s;
+  transition: opacity 0.3s ease-in-out;
+  border-bottom-right-radius: 0;
+  border-bottom: 4px solid darkgoldenrod;
+  
 }
 /*.package h3{
   font-size: 180%;
@@ -423,23 +481,27 @@ section .package.show{
   position: relative;
   height: auto;
   margin-bottom: 8px;
+  background-color: rgba(245,246,234,.6);
 }
 .card-wrapper h1{
   display: block;
   width: 100%;
-  background-color: rgba(0, 0, 0, 0.774);
-  color: #fff;
-  padding: 20px 10px 20px 10px;
-  /*font-size: 180%;*/
-  font-weight: 800;
-  text-align: center;
+  color: steelblue;
+  padding: 20px 10px;
+  font-size: 1.5rem;
+  font-weight: 900;
+  border-bottom: 1px solid steelblue;
+  margin-bottom: 8px;
 }
 .card-wrapper .card{
   position: relative;
   display: inline-block;
   width: 250px;
   height: auto;
-  background-color: lightgrey;
+  background-color: rgba(245,246,234,.6);
+  border-radius: 8px;
+  box-shadow: 0 0 4px #000;
+  text-align: left;
   margin: 4px;
   padding: 10px;
   float: left;

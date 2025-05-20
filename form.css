@@ -1,44 +1,54 @@
 body{
-  background-image: linear-gradient(rgba(12,17,18,.4),rgba(12,17,18,.4)),url(images/tech3.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  background-origin: content-box;
+  height: 100vh;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  color: white;
 }
 form{
-  width: 50%;
+  width: 80%;
   height: auto;
   margin: 4vh auto;
-  padding: 20px;
-  border: 2px solid darkgoldenrod; 
-  border-radius: 18px;
-  background-color: rgba(12,17,18,.6);
-  box-shadow: 2px 4px 12px grey;
+  padding: 40px; /* Increased padding for better spacing */
+  border: none; /* Removed border for a cleaner look */
+  border-radius: 25px; /* Softened the corners */
+  background-color: rgba(255, 255, 255, 1); /* white background */
+  color: steelblue;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); /* Enhanced shadow for depth */
+  transition: all 0.3s ease-in-out; /* Smoother transition for all properties */
+  
 }
 form h1{
   text-align: center;
   padding: 20px;
   /*font-size: 2rem;*/
   font-weight: bold;
-  color: white;
 }
 form label{
-  color: white;
+  color: steelblue;
   font-weight: bold;
+  font-size: 120%;
+  display: block;
+  padding: 10px;
+  margin-bottom: 4px;
+  transition: color 0.3s ease-in-out;
+  
 }
 form .input{
   width: 100%;
-  height: 40px;
+  height: auto;
   padding: 10px;
-  margin-bottom: 4px;
-  border: transparent;
-  border-bottom: 2px solid darkgoldenrod;
-  background-color: transparent;
-  color: white;
-  font-weight: bold;
+  border-radius: 8px;
+  border: 1px solid steelblue;
+  background-color: rgba(234,246,236,.8);
+  color: steelblue;
+  margin-bottom: 10px; /* Add more margin */
 }
 form .input:focus{
   outline: none;
+  border-bottom-color: darkgoldenrod;
+  background-color: rgba(12,17,18,.2);
+  border: 1px solid darkgoldenrod;
 }
 form .input:hover{
   border-bottom-color: white;
@@ -49,7 +59,7 @@ form p,#checkbox{
   display: inline;
 }
 form p{
-  color: white;
+  color: steelblue;
 }
 form #submit{
   text-align: center;
